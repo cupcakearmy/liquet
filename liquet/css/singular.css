@@ -3,6 +3,10 @@
     overflow: auto;
 }
 
+#singular #main a{
+    text-decoration: underline;
+}
+
 #singular #header {
     text-align: center;
     padding: 0 2em;
@@ -26,6 +30,7 @@
 #singular #content > * {
     max-width: var(--text-width);
     width: 100%;
+    line-height: 1.5;
 }
 
 
