@@ -12,6 +12,7 @@ Theme URI: https://github.com/cupcakearmy/liquet
 
 * {
     box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
     --clr-primary: hsl(194, 100%, 88%);
     --clr-white: #ffffff;
     --clr-black: #000000;
