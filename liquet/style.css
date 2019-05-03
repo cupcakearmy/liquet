@@ -38,6 +38,7 @@ pre {
     background-color: var(--clr-ligher);
     padding: 1em;
     border-radius: .25em;
+    overflow-wrap: initial;
 }
 
 a {
