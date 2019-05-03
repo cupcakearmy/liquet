@@ -1,0 +1,32 @@
+.flex.container {
+    display: flex;
+}
+
+.flex.container.horizontal {
+    flex-direction: row;
+}
+
+.flex.container.vertical {
+    flex-direction: column;
+}
+
+.flex.container.middle {
+    align-items: center;
+}
+
+.flex.container.center {
+    justify-content: center;
+}
+
+.flex.item {
+    overflow: hidden;
+    /*display: inline-block;*/
+}
+
+.flex.item.grow {
+    flex: 1 0;
+}
+
+.flex.item.shrink {
+    flex: 0 1 auto;
+}

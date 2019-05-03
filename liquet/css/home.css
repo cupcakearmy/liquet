@@ -1,0 +1,70 @@
+#home #header {
+    text-align: center;
+    margin-top: 8vw;
+    margin-bottom: 8vw;
+    padding: 0 2em;
+}
+
+#home #header h1 {
+    font-size: 12vw;
+    font-family: "Abril Fatface", serif;
+}
+
+#home #header h2 {
+    font-size: 5.5vw;
+}
+
+@media only screen and (min-width: 40em) {
+    #home #header h1 {
+        font-size: 5em;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    #home #header h2 {
+        font-size: 2em;
+    }
+}
+
+#home #list-container {
+    /*background: var(--clr-primary);*/
+}
+
+#home #list-header {
+    /*background: var(--clr-primary);*/
+    /*box-shadow: 0 0 1em -0.5em hsla(0, 0%, 0%, 0.1);*/
+}
+
+#home #list {
+    text-align: left;
+    width: 100%;
+    padding: 0 2em;
+    margin-bottom: 8vw;
+}
+
+@media only screen and (min-width: 40em) {
+    #home #list {
+        width: var(--text-width);
+    }
+}
+
+#home #list > .item {
+    padding: .25em 1em;
+    margin: 1.5em 0;
+    transition: all ease .1s;
+    border-radius: .5em;
+    display: block;
+}
+
+#home #list > .item:hover {
+    box-shadow: 0 0.2em 0.5em -0.1em #00000014;
+    transform: scale(1.05);
+}
+
+#home #list > .item .title {
+    margin-bottom: .25em;
+}
+
+#home #list hr {
+    margin: 0 1.5em;
+}

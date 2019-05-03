@@ -1,0 +1,64 @@
+#singular #main {
+    padding: 8vw 0;
+    overflow: auto;
+}
+
+#singular #header {
+    text-align: center;
+    padding: 0 2em;
+    margin-bottom: 5vmin;
+}
+
+#singular #header {
+    max-width: 60em;
+    width: calc(100% - 2em);
+}
+
+#singular #header h1 {
+    font-size: 4vmax;
+}
+
+#singular #content {
+    width: 100%;
+    padding: 0 2em;
+}
+
+#singular #content > * {
+    max-width: var(--text-width);
+    width: 100%;
+}
+
+
+#singular #content .alignfull {
+    max-width: initial;
+    width: calc(100% + 4em);
+}
+
+#singular #content .alignwide {
+    max-width: 60em !important;
+    width: 100%;
+}
+
+#singular .links > div {
+    transform: rotate(180deg) scale(1);
+    writing-mode: vertical-rl;
+    padding: .25em;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    background: var(--clr-white);
+    transition: var(--animation);
+    width: 2em;
+    line-height: 1em;
+}
+
+@media only screen and (min-width: 40em) {
+    #singular .links > div {
+        padding: 1em;
+        width: 3em;
+    }
+}
+
+#singular .links > div:hover {
+    transform: rotate(180deg) scale(1.5);
+}
