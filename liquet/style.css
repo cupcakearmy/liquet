@@ -70,6 +70,7 @@ hr {
     height: 100vh;
     position: fixed;
     overflow-x: auto;
+    background-color: var(--clr-white);
 }
 
 .view {
