@@ -4,6 +4,7 @@ services:
   wp:
     image: wordpress:5-apache
     volumes:
+      - ./data/wp:/var/www/html
       - ./liquet:/var/www/html/wp-content/themes/liquet:ro
     ports:
       - 80:80
