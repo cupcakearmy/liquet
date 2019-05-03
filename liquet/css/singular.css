@@ -1,9 +1,10 @@
 #singular #main {
     padding: 8vw 0;
     overflow: auto;
+    overflow-wrap: break-word;
 }
 
-#singular #main a{
+#singular #main a {
     text-decoration: underline;
 }
 
