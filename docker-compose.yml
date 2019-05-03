@@ -4,6 +4,7 @@ services:
   wp:
     image: wordpress:5-apache
     volumes:
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./data/wp:/var/www/html
       - ./liquet:/var/www/html/wp-content/themes/liquet:ro
     ports:
@@ -16,10 +17,3 @@ services:
     volumes:
       - ./data/db:/var/lib/mysql
     env_file: .env
-      
-
-  # adminer:
-  #   image: adminer
-  #   restart: always
-  #   ports:
-  #     - 8080:8080
