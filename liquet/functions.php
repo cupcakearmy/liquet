@@ -1,9 +1,5 @@
 <?php
 
-@ini_set( 'upload_max_size' , '128M' );
-@ini_set( 'post_max_size', '128M');
-@ini_set( 'max_execution_time', '300' );
-
 add_theme_support( 'align-wide' );
 
 add_action( 'wp_enqueue_scripts', function () {
