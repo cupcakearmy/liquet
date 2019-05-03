@@ -1,6 +1,7 @@
 <?php
 
 add_theme_support( 'align-wide' );
+add_theme_support( 'title-tag' );
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'flex', get_template_directory_uri() . '/css/flex.css' );
