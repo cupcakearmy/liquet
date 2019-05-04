@@ -4,7 +4,7 @@ services:
   wp:
     image: wordpress:5-apache
     volumes:
-      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
       - ./data/wp:/var/www/html
       - ./liquet:/var/www/html/wp-content/themes/liquet:ro
     ports:
