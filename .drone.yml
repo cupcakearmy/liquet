@@ -1,0 +1,21 @@
+kind: pipeline
+name: default
+
+steps:
+
+  - name: deploy
+    image: cupcakearmy/drone-deploy
+    pull: always
+    environment:
+      PLUGIN_KEY:
+        from_secret: ssh_key
+    settings:
+      host: nicco.io
+      user: root
+      port: 1312
+      target: /srv/web/blog/liquet
+      commands:
+        - git pull
+    when:
+      event: push
+      branch: master
