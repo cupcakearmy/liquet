@@ -1,9 +1,11 @@
 <?php
 
+include_once( 'loop-utils.php' );
+include_once( 'logos.php' );
+include_once( 'tags.php' );
+
 get_header();
 the_post();
-
-include_once( 'loop-utils.php' );
 
 $dates = getDates();
 
@@ -43,7 +45,9 @@ $dates = getDates();
                         <br><br>
 						<?php the_content(); ?>
                         <br>
-						<?php get_template_part( 'tags-list', get_post_format() ); ?>
+						<?php render_current_tags(); ?>
+                        <hr>
+						<?php render_links(); ?>
                     </div>
                 </div>
 

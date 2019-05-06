@@ -1,0 +1,14 @@
+#logos {
+    margin: 1.5em 0 0 0;
+}
+
+#logos img {
+    height: 2em;
+    width: 2em;
+    margin: 0 .5em;
+    transition: var(--animation);
+}
+
+#logos img:hover {
+    transform: scale(1.15);
+}
