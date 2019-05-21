@@ -1,14 +1,23 @@
 #logos {
-    margin: 1.5em 0 0 0;
+    margin-top: 1.5em;
 }
 
-#logos img {
+#logos #title {
+    margin: 2em;
+    text-align: center;
+}
+
+#logos #title img {
+    height: 1.5em;
+}
+
+#logos #list img {
     height: 2em;
     width: 2em;
     margin: 0 .5em;
     transition: var(--animation);
 }
 
-#logos img:hover {
+#logos #list img:hover {
     transform: scale(1.15);
 }

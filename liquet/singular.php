@@ -46,8 +46,7 @@ $dates = getDates();
 						<?php the_content(); ?>
                         <br>
 						<?php render_current_tags(); ?>
-                        <hr>
-						<?php render_links(); ?>
+                        <?php render_links(true); ?>
                     </div>
                 </div>
 

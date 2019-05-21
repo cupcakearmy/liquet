@@ -4,8 +4,8 @@
     overflow-wrap: break-word;
 }
 
-#singular #main a {
-    text-decoration: underline;
+#singular #main p a {
+    border-bottom: 2px solid var(--clr-black);
 }
 
 #singular #header {
