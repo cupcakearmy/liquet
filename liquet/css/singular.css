@@ -4,10 +4,6 @@
     overflow-wrap: break-word;
 }
 
-#singular #main p a {
-    border-bottom: 2px solid var(--clr-black);
-}
-
 #singular #header {
     text-align: center;
     padding: 0 2em;
@@ -43,6 +39,24 @@
 #singular #content .alignwide {
     max-width: 60em !important;
     width: 100%;
+}
+
+#singular #main #content > p a,
+#singular #main #content > figure a {
+    border-bottom: 2px solid var(--clr-black);
+}
+
+#singular #content blockquote {
+    border-left: 2px solid var(--clr-black);
+    padding-left: .5em;
+}
+
+#singular #content blockquote > p {
+    margin: 0;
+}
+
+#singular #content blockquote > cite {
+    font-size: .75em;
 }
 
 #singular .links > div {
