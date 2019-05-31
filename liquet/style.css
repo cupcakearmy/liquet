@@ -61,6 +61,14 @@ hr {
     font-family: "Abril Fatface", serif;
 }
 
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
 #app {
     width: 100vw;
     height: 100vh;
@@ -93,4 +101,10 @@ hr {
 
 .gohome:hover {
     transform: scale(1.5);
+}
+
+img.icon {
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
 }
