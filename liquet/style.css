@@ -33,14 +33,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
-pre {
-    overflow: auto;
-    background-color: var(--clr-ligher);
-    padding: 1em;
-    border-radius: .25em;
-    overflow-wrap: initial;
-}
-
 a {
     text-decoration: none;
     color: inherit;

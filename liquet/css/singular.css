@@ -59,7 +59,16 @@
     font-size: .75em;
 }
 
-#singular #content code {
+#singular #content pre {
+    overflow: auto;
+    background-color: var(--clr-ligher);
+    padding: 1em;
+    border-radius: .25em;
+    overflow-wrap: initial;
+    tab-size: 4;
+}
+
+#singular #content p code {
     background: var(--clr-ligher);
     padding: 0.3em .5em;
     border-radius: .25em;
