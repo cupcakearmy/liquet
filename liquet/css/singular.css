@@ -59,6 +59,12 @@
     font-size: .75em;
 }
 
+#singular #content code {
+    background: var(--clr-ligher);
+    padding: 0.3em .5em;
+    border-radius: .25em;
+}
+
 #singular .links > div {
     transform: rotate(180deg) scale(1);
     writing-mode: vertical-rl;
