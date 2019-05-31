@@ -44,9 +44,12 @@ $dates = getDates();
                         </div>
                         <br><br>
 						<?php the_content(); ?>
+
+                    </div>
+                    <div class="flex container vertical middle">
                         <br>
 						<?php render_current_tags(); ?>
-                        <?php render_links(true); ?>
+						<?php render_links( true ); ?>
                     </div>
                 </div>
 
