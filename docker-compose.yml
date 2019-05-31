@@ -7,7 +7,7 @@ x-default: &default
 services:
   wp:
     <<: *default
-    image: wordpress:5-apache
+    build: .
     volumes:
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
       - ./data/wp:/var/www/html
