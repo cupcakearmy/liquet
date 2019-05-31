@@ -16,7 +16,7 @@ add_action( 'wp_enqueue_scripts', function () {
 
 
 add_action( 'admin_init', function () {
-	add_settings_section( 'section', 'All Settings', null, 'theme-options' );
+	add_settings_section( 'section-link', 'Links', null, 'theme-options' );
 
 	global $links;
 	foreach ( $links as $link ) {
@@ -24,10 +24,18 @@ add_action( 'admin_init', function () {
 		$id = $link . '_url';
 		add_settings_field( $id, ucfirst( $link ) . ' Url', function () use ( $id ) { ?>
             <input type="text" name="<?= $id ?>" id="<?= $id ?>" value="<?= get_option( $id ); ?>"/>
-		<?php }, 'theme-options', 'section' );
+		<?php }, 'theme-options', 'section-link' );
 
-		register_setting( 'section', $id );
+		register_setting( 'section-link', $id );
 	}
+
+	add_settings_section( 'section-views', 'View counter', null, 'theme-options' );
+
+	add_settings_field( 'view_min', 'Show view counter if views are above:', function () { ?>
+        <input type="text" name="view_min" id="view_min" value="<?= (int) get_option( 'view_min' ) ?>"/>
+	<?php }, 'theme-options', 'section-views' );
+
+	register_setting( 'section-views', 'view_min' );
 
 } );
 
@@ -36,7 +44,8 @@ function theme_settings_page() { ?>
         <h1>Theme Panel</h1>
         <form method="post" action="options.php">
 			<?php
-			settings_fields( 'section' );
+			settings_fields( 'section-link' );
+			settings_fields( 'section-views' );
 			do_settings_sections( 'theme-options' );
 			submit_button();
 			?>

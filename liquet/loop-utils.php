@@ -16,8 +16,28 @@ function getDates() {
 	$modified      = get_the_modified_date( ( $modified_year == $created_year ? 'F j' : null ) );
 
 	return [
-		'created'  => $created,
-		'modified' => $modified,
-		'different'     => $created != $modified,
+		'created'   => $created,
+		'modified'  => $modified,
+		'different' => $created != $modified,
 	];
+}
+
+function getCurrentPageViews() {
+	if ( ! is_single() ) {
+		return null;
+	}
+
+	$total = (int) do_shortcode( '[wpstatistics stat=pagevisits time=total]' );
+	$min   = (int) get_option( 'view_min' );
+
+	if ( $total < $min ) {
+		return null;
+	}
+
+	$approximated = round( $total / 1000, 1 );
+	?>
+    <div id="views">
+        <b>~<?= $approximated ?>k readers</b>
+    </div>
+	<?
 }

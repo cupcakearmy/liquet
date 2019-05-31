@@ -38,8 +38,9 @@ $dates = getDates();
 								<?php } ?>
                             </div>
                             <div class="flex item grow"></div>
-                            <div>
+                            <div class="text-align-right">
                                 <b>~<?= do_shortcode( '[rt_reading_time]' ); ?> min</b>
+								<?= getCurrentPageViews() ?>
                             </div>
                         </div>
                         <br><br>
