@@ -14,6 +14,19 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'fonts', get_template_directory_uri() . '/vendor/fonts/import.css' );
 } );
 
+add_action( 'widgets_init', function () {
+
+	register_sidebar( array(
+		'name'          => 'Below posts',
+		'id'            => 'below_posts',
+		'before_widget' => '<div class="widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="alt-font">',
+		'after_title'   => '</h3>',
+	) );
+
+} );
+
 
 add_action( 'admin_init', function () {
 	add_settings_section( 'section-link', 'Links', null, 'theme-options' );

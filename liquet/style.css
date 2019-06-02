@@ -69,6 +69,10 @@ hr {
     text-align: left;
 }
 
+.text-align-center {
+    text-align: center;
+}
+
 #app {
     width: 100vw;
     height: 100vh;
@@ -107,4 +111,9 @@ img.icon {
     height: 1em;
     display: inline-block;
     vertical-align: middle;
+}
+
+.auto-width {
+    max-width: var(--text-width);
+    width: 100%;
 }
