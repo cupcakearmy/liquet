@@ -1,7 +1,13 @@
 #singular #main {
-    padding: 8vw 0 16vh 0;
-    overflow: auto;
+    padding-top: 8vw;
+    overflow-y: auto;
     overflow-wrap: break-word;
+}
+
+#singular #main:after{
+    content: '';
+    height: 16vh;
+    display: block;
 }
 
 #singular #header {
