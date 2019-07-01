@@ -1,10 +1,28 @@
+#singular #top img {
+    margin: .25em .25em;
+    vertical-align: middle;
+    transition: var(--animation);
+}
+
+#singular #top img:hover {
+    transform: scale(1.5);
+}
+
+#singular #top #left img {
+    width: 1.5em;
+}
+
+#singular #top #right img {
+    width: 1em;
+}
+
 #singular #main {
     padding-top: 8vw;
     overflow-y: auto;
     overflow-wrap: break-word;
 }
 
-#singular #main:after{
+#singular #main:after {
     content: '';
     height: 16vh;
     display: block;
@@ -93,13 +111,17 @@
     line-height: 1em;
 }
 
+#singular .links > div:hover {
+    transform: rotate(180deg) scale(1.5);
+}
+
 @media only screen and (min-width: 40em) {
     #singular .links > div {
         padding: 1em;
         width: 3em;
     }
-}
 
-#singular .links > div:hover {
-    transform: rotate(180deg) scale(1.5);
+    #singular #top img {
+        margin: .25em 1em;
+    }
 }

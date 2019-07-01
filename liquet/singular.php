@@ -11,10 +11,28 @@ $dates = getDates();
 
 ?>
     <div class="flex container vertical fill" id="singular">
-        <div class="flex item shrink gohome">
-            <a href="<?= get_bloginfo( 'wpurl' ); ?>">
-                <span class="alt-font"><?= get_bloginfo( 'name' ); ?></span>
-            </a>
+        <div class="flex item shrink" id="top">
+            <div class="flex container horizontal middle">
+                <div class="flex item grow text-align-left" id="left">
+                    <a href="<?= get_bloginfo( 'wpurl' ); ?>">
+                        <img src="<?= get_template_directory_uri() . '/vendor/icons/left.svg' ?>" alt="arrow back"/>
+                    </a>
+                </div>
+                <div class="flex item shrink gohome" id="center">
+                    <a href="<?= get_bloginfo( 'wpurl' ); ?>">
+                        <span class="alt-font"><?= get_bloginfo( 'name' ); ?></span>
+                    </a>
+                </div>
+                <div class="flex item grow text-align-right" id="right">
+					<?php
+					$saved = get_option( 'website_url' );
+					if ( $saved ) : ?>
+                        <a href="<?= $saved; ?>" target="_blank">
+                            <img src="<?= get_template_directory_uri() . '/vendor/logos/website.png' ?>" alt="website"/>
+                        </a>
+					<?php endif; ?>
+                </div>
+            </div>
         </div>
         <div class="flex item grow">
             <div class="flex container horizontal fill">
@@ -63,6 +81,8 @@ $dates = getDates();
                             <div class="auto-width text-align-center">
                                 <br>
 								<?php render_current_tags(); ?>
+                                <br>
+                                <br>
                                 <br>
                             </div>
 						<?php endif; ?>

@@ -20,7 +20,7 @@ function render_links( $expanded = false ) {
 			if ( $saved ) { ?>
                 <a href="<?= $saved ?>" target="_blank">
                     <img src="<?= get_template_directory_uri() . '/vendor/logos/' . $link . '.png' ?>"
-                         alt="<?= $link; ?>"/>
+                         alt="<?= $link; ?>" rel="noopener"/>
                 </a>
 			<?php }
 		}

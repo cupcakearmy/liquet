@@ -2,6 +2,7 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     src: url('./Raleway/Raleway-Regular.woff2') format('woff2')
 }
 
@@ -9,6 +10,7 @@
     font-family: 'Raleway';
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
     src: url('./Raleway/Raleway-Italic.woff2') format('woff2')
 }
 
@@ -16,6 +18,7 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: bold;
+    font-display: swap;
     src: url('./Raleway/Raleway-Bold.woff2') format('woff2')
 }
 
@@ -23,6 +26,7 @@
     font-family: 'Raleway';
     font-style: italic;
     font-weight: bold;
+    font-display: swap;
     src: url('./Raleway/Raleway-BoldItalic.woff2') format('woff2')
 }
 
@@ -30,5 +34,6 @@
     font-family: 'Abril Fatface';
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
     src: url('./Abril/AbrilFatface-Regular.woff2') format('woff2')
 }

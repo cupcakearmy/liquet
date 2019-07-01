@@ -1,7 +1,7 @@
 #home #header {
     text-align: center;
-    margin-top: 8vw;
-    margin-bottom: 8vw;
+    margin-top: 8vmin;
+    margin-bottom: 16vmin;
     padding: 0 2em;
 }
 
@@ -27,19 +27,15 @@
 }
 
 #home #list-container {
-    /*background: var(--clr-primary);*/
 }
 
 #home #list-header {
-    /*background: var(--clr-primary);*/
-    /*box-shadow: 0 0 1em -0.5em hsla(0, 0%, 0%, 0.1);*/
 }
 
 #home #list {
     text-align: left;
     width: 100%;
     padding: 0 2em;
-    margin-bottom: 16vh;
 }
 
 @media only screen and (min-width: 40em) {
