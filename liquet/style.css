@@ -2,7 +2,7 @@
 Theme Name: Liquet
 Author: Niccolo Borgioli
 Description: Minimalistic clean theme
-Version: 0.8
+Version: 0.9
 License: MIT
 Tags: minimal, simple, typography, clean
 Author URI: https://nicco.io
@@ -20,6 +20,7 @@ Theme URI: https://github.com/cupcakearmy/liquet
     --clr-ligher: #eeeeee;
     --text-width: 35rem;
     --animation: all 100ms ease;
+    --small-shadow: 0 0.2em 0.5em -0.1em #00000014;
 }
 
 html, body {
