@@ -2,7 +2,7 @@
 Theme Name: Liquet
 Author: Niccolo Borgioli
 Description: Minimalistic clean theme
-Version: 0.9
+Version: 0.10
 License: MIT
 Tags: minimal, simple, typography, clean
 Author URI: https://nicco.io
@@ -142,4 +142,8 @@ img.icon {
 .auto-width {
     max-width: var(--text-width);
     width: 100%;
+}
+
+.spacer-footer{
+    height: 8em;
 }
