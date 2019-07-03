@@ -28,5 +28,6 @@ $tags = get_tags( [ 'orderby' => 'count', 'order' => 'desc' ] );
 				?>
             </div>
         </div>
+        <div class="spacer"></div>
     </div>
 <?php get_footer(); ?>
