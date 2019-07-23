@@ -21,6 +21,7 @@ Theme URI: https://github.com/cupcakearmy/liquet
     --text-width: 35rem;
     --animation: all 100ms ease;
     --small-shadow: 0 0.2em 0.5em -0.1em #00000014;
+    scroll-behavior: smooth;
 }
 
 html, body {
