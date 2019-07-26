@@ -18,7 +18,7 @@ function render_links( $expanded = false ) {
 		foreach ( $links as $link ) {
 			$saved = get_option( $link . '_url' );
 			if ( $saved ) { ?>
-                <a href="<?= $saved ?>" target="_blank">
+                <a href="<?= $saved ?>" target="_blank" rel="noopener">
                     <img src="<?= get_template_directory_uri() . '/vendor/logos/' . $link . '.png' ?>"
                          alt="<?= $link; ?>" rel="noopener"/>
                 </a>
