@@ -2,18 +2,15 @@
     margin: .25em .25em;
     vertical-align: middle;
     transition: var(--animation);
+    height: var(--icon-width);
 }
 
 #singular #top img:hover {
     transform: scale(1.5);
 }
 
-#singular #top #left img {
-    width: 1.5em;
-}
-
-#singular #top #right img {
-    width: 1em;
+#singular #top img.reduce {
+    height: calc(var(--icon-width) * .8);
 }
 
 #singular #main {
@@ -122,6 +119,10 @@
     }
 
     #singular #top img {
-        margin: .25em 1em;
+        margin: .25em .5em;
+    }
+
+    #singular #top{
+        padding: 0 .5em;
     }
 }

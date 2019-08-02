@@ -7,6 +7,10 @@ add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 
 add_action( 'wp_enqueue_scripts', function () {
+	// JS
+	wp_enqueue_script( 'liquet-lights', get_template_directory_uri() . '/js/lights.js' );
+
+	// CSS
 	wp_enqueue_style( 'flex', get_template_directory_uri() . '/css/flex.css' );
 	wp_enqueue_style( 'liquet', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'liquet-home', get_template_directory_uri() . '/css/home.css' );

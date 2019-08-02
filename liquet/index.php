@@ -7,6 +7,9 @@ get_header();
 $tags = get_tags( [ 'orderby' => 'count', 'order' => 'desc' ] );
 ?>
     <div id="home">
+        <a id="lights" href="javascript:void(0);" onclick="window.toggleLights();">
+            <img src="<?= get_template_directory_uri() . '/vendor/icons/contrast.svg' ?>" alt="lights"/>
+        </a>
         <div class="flex container vertical middle" id="list-header">
             <div id="header">
                 <a href="<?= get_bloginfo( 'wpurl' ); ?>">

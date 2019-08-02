@@ -21,6 +21,7 @@ Theme URI: https://github.com/cupcakearmy/liquet
     --text-width: 35rem;
     --animation: all 100ms ease;
     --small-shadow: 0 0.2em 0.5em -0.1em #00000014;
+    --icon-width: 1.5em;
     scroll-behavior: smooth;
 }
 
@@ -91,31 +92,6 @@ hr {
     margin-top: -.25em;
 }
 
-
-@media only screen and (max-width: 40em) {
-    .tags::-webkit-scrollbar {
-        width: 2px;
-        background: transparent;
-        height: 2px;
-    }
-
-    .tags::-webkit-scrollbar-thumb {
-        background: var(--clr-dark);
-        border-radius: 2px;
-    }
-
-    .tags {
-        display: flex;
-        flex-direction: row;
-        overflow: auto;
-    }
-
-    .tags > a.tag {
-        margin: .25em;
-        flex: 1 0 auto;
-    }
-}
-
 .tags > a.tag {
     padding: .25em;
     background: #eee;
@@ -145,6 +121,34 @@ img.icon {
     width: 100%;
 }
 
-.spacer{
+.spacer {
     height: 8em;
+}
+
+@media only screen and (max-width: 40em) {
+    .tags::-webkit-scrollbar {
+        width: 2px;
+        background: transparent;
+        height: 2px;
+    }
+
+    .tags::-webkit-scrollbar-thumb {
+        background: var(--clr-dark);
+        border-radius: 2px;
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+    }
+
+    .tags > a.tag {
+        margin: .25em;
+        flex: 1 0 auto;
+    }
+
+    .gohome {
+        padding: .25em;
+    }
 }
