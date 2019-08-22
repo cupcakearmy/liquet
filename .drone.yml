@@ -10,7 +10,7 @@ steps:
       PLUGIN_KEY:
         from_secret: ssh_key
     settings:
-      host: nicco.io
+      host: srv-0.nicco.io
       user: root
       port: 1312
       target: /srv/web/blog/liquet
