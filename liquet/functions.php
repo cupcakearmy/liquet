@@ -8,7 +8,7 @@ add_theme_support( 'post-thumbnails' );
 
 
 add_filter( 'wp_headers', function ( $headers ) {
-	$headers['Content-Security-Policy']   = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; report-uri csp@nicco.io";
+	$headers['Content-Security-Policy']   = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://s.w.org; report-uri csp@nicco.io";
 	$headers['X-Content-Type-Options']    = 'nosniff';
 	$headers['X-Frame-Options']           = "deny";
 	$headers['Strict-Transport-Security'] = "max-age=31536000";
