@@ -2,6 +2,11 @@
 
 A minimalistic and clean wordpress theme. Guteberg support out of the box.
 
+###### Support:
+
+[<img alt="Browserstack" src="http://www.browserstack.com/images/layout/browserstack-logo-600x315.png" width="200">](https://www.browserstack.com)
+
+
 ###### Home
 ![Home](https://github.com/CupCakeArmy/liquet/blob/master/docs/Home.png)
 
