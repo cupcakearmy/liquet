@@ -7,13 +7,13 @@ function render_links( $expanded = false ) {
 	?>
     <div id="logos">
 	<?php if ( $expanded ) { ?>
-        <div id="title" class="alt-font">
+        <div class="title alt-font">
             discuss & share
             <br/>
             <img src="<?= get_template_directory_uri() . '/vendor/icons/down.svg' ?>" alt="arrow down"/>
         </div>
 	<?php } ?>
-    <div class="flex container horizontal middle center" id="list">
+    <div class="list flex container horizontal middle center">
 		<?php
 		foreach ( $links as $link ) {
 			$saved = get_option( $link . '_url' );
