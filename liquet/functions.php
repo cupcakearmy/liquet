@@ -19,7 +19,7 @@ add_filter( 'wp_headers', function ( $headers ) {
 
 add_action( 'wp_enqueue_scripts', function () {
 	// JS
-	wp_enqueue_script( 'liquet-lights', get_template_directory_uri() . '/js/lights.js' );
+	wp_enqueue_script( 'liquet-main', get_template_directory_uri() . '/js/main.js' );
 
 	// CSS
 	wp_enqueue_style( 'flex', get_template_directory_uri() . '/css/flex.css' );
@@ -28,7 +28,38 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'liquet-singular', get_template_directory_uri() . '/css/singular.css' );
 	wp_enqueue_style( 'liquet-logos', get_template_directory_uri() . '/css/logos.css' );
 	wp_enqueue_style( 'fonts', get_template_directory_uri() . '/vendor/fonts/import.css' );
+
+	// Lazy loading
+	global $wp_query;
+	wp_register_script( 'lazy_loading', get_template_directory_uri() . '/js/lazy_load.js', array( 'jquery' ) );
+	wp_localize_script( 'lazy_loading', 'lazy_load_params', array(
+		'ajaxurl'      => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+		'posts'        => json_encode( $wp_query->query_vars ), // everything about your loop is here
+		'current_page' => get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1,
+		'max_page'     => $wp_query->max_num_pages
+	) );
+
+	wp_enqueue_script( 'lazy_loading' );
 } );
+
+
+function lazy_load_ajax_handler() {
+	$args                = json_decode( stripslashes( $_POST['query'] ), true );
+	$args['paged']       = $_POST['page'] + 1; // we need next page to be loaded
+	$args['post_status'] = 'publish';
+	query_posts( $args );
+
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post();
+			get_template_part( 'post-preview', get_post_format() );
+		}
+	}
+	die;
+}
+
+add_action( 'wp_ajax_lazy_load', 'lazy_load_ajax_handler' );
+add_action( 'wp_ajax_nopriv_lazy_load', 'lazy_load_ajax_handler' );
 
 add_action( 'widgets_init', function () {
 
