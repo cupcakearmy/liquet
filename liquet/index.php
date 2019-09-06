@@ -6,7 +6,7 @@ get_header();
 
 $tags = get_tags( [ 'orderby' => 'count', 'order' => 'desc' ] );
 ?>
-    <div id="home">
+    <div id="home" data-focusme>
         <a id="lights" href="javascript:void(0);" onclick="window.toggleLights();">
             <img src="<?= get_template_directory_uri() . '/vendor/icons/contrast.svg' ?>" alt="lights"/>
         </a>

@@ -43,7 +43,7 @@ $dates = getDates();
                     <div class="alt-font">previous</div>
                 </a>
 
-                <div class="flex item grow" id="main">
+                <div class="flex item grow" id="main" data-focusme>
                     <div class="flex container vertical middle">
 
                         <!-- Title -->

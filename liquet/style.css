@@ -25,6 +25,10 @@ Theme URI: https://github.com/cupcakearmy/liquet
     scroll-behavior: smooth;
 }
 
+*[tabindex]:focus {
+    outline: none;
+}
+
 html, body {
     padding: 0;
     margin: 0;
