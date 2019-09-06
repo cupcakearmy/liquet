@@ -42,5 +42,6 @@ switch ($type) {
                 ?>
             </div>
         </div>
+        <div class="spacer"></div>
     </div>
 <?php get_footer(); ?>
