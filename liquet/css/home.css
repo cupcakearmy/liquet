@@ -34,12 +34,6 @@
     display: block;
 }
 
-#home #list > .item:hover {
-    box-shadow: var(--small-shadow);
-    transform: scale(1.05);
-    padding-bottom: 1em;
-}
-
 #home #list > .item .title {
     margin-bottom: .25em;
 }
@@ -52,13 +46,6 @@
     border-radius: .5em;
     transition: var(--animation);
     transform: scale(1);
-}
-
-#home #list > .item:hover .thumbnail img {
-    transform: scale(1.2) translateY(-1em);
-    height: 16em;
-    margin: 1em 0;
-    box-shadow: var(--small-shadow);
 }
 
 #home #list hr {
@@ -89,5 +76,18 @@
     #home #lights img{
         top: .5em;
         right: 1em;
+    }
+
+    #home #list > .item:hover {
+        box-shadow: var(--small-shadow);
+        transform: scale(1.05);
+        padding-bottom: 1em;
+    }
+
+    #home #list > .item:hover .thumbnail img {
+        transform: scale(1.2) translateY(-1em);
+        height: 16em;
+        margin: 1em 0;
+        box-shadow: var(--small-shadow);
     }
 }
