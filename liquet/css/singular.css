@@ -62,8 +62,7 @@
     width: 100%;
 }
 
-#singular #main #content > p a,
-#singular #main #content > figure a {
+#singular #main #content > * a {
     border-bottom: 2px solid var(--clr-black);
 }
 
@@ -122,7 +121,7 @@
         margin: .25em .5em;
     }
 
-    #singular #top{
+    #singular #top {
         padding: 0 .5em;
     }
 }
