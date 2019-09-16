@@ -40,6 +40,18 @@
     font-size: 4vmax;
 }
 
+#singular #content h2 {
+    margin-top: 3em;
+}
+
+#singular #content h3 {
+    margin-top: 2em;
+}
+
+#singular #content h4, h5, h6 {
+    margin-top: 1em;
+}
+
 #singular #content {
     width: 100%;
     padding: 0 1em;
