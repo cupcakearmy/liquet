@@ -8,10 +8,10 @@ A minimalistic and clean wordpress theme. Guteberg support out of the box.
 
 
 ###### Home
-![Home](https://github.com/CupCakeArmy/liquet/blob/master/docs/Home.png)
+![Home](./docs/Home.png)
 
 ###### Post
-![Post](https://github.com/CupCakeArmy/liquet/blob/master/docs/Post.png)
+![Post](./docs/Post.png)
 
 ## Required Plugins
 
