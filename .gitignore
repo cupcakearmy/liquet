@@ -1,3 +1,13 @@
+# Editor
 .idea
 
+# Docker
 data/
+
+# Node
+node_modules/
+pnpm-lock.yaml
+
+# Generated
+.cache/
+liquet/dist/

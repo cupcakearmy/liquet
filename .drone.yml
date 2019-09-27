@@ -3,6 +3,15 @@ name: default
 
 steps:
 
+  - name: build
+    image:
+    pull: always
+    commands:
+      - node -v
+      - npm i
+      - npm run build
+
+
   - name: deploy
     image: cupcakearmy/drone-deploy
     pull: always
@@ -13,9 +22,9 @@ steps:
       host: srv-0.nicco.io
       user: root
       port: 1312
-      target: /srv/web/blog/liquet
-      commands:
-        - git pull
+      target: /srv/web/blog
+      sources:
+        - ./liquet
     when:
       event: push
       branch: master
