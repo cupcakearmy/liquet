@@ -1,3 +1,5 @@
+import jQuery from 'jquery'
+
 jQuery(($) => {
     const bottomOffset = 300
     const app = document.getElementById('app')
@@ -8,20 +10,19 @@ jQuery(($) => {
         const pixelToBottom = this.scrollHeight - (this.scrollTop + this.clientHeight)
 
         if (!loading && pixelToBottom < bottomOffset) {
-            console.log('Loading...')
             loading = true
             $.ajax({
-                url: lazy_load_params.ajaxurl,
+                url: WPParams.lazy.ajaxurl,
                 data: {
                     'action': 'lazy_load',
-                    'query': lazy_load_params.posts,
-                    'page': lazy_load_params.current_page
+                    'query': JSON.stringify(WPParams.lazy.posts),
+                    'page': WPParams.lazy.current_page
                 },
                 type: 'POST',
                 success: function (data) {
                     if (data) {
                         $('#list').find('hr:last-of-type').after(data) // where to insert posts
-                        lazy_load_params.current_page++
+                        WPParams.lazy.current_page++
                         loading = false
                     }
                 }
