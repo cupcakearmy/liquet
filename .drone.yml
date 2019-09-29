@@ -8,22 +8,22 @@ steps:
     commands:
       - node -v
       - pnpm --shamefully-flatten i
-      - pnpm run build:prod
-#
-#
-#  - name: deploy
-#    image: cupcakearmy/drone-deploy
-#    pull: always
-#    environment:
-#      PLUGIN_KEY:
-#        from_secret: ssh_key
-#    settings:
-#      host: srv-0.nicco.io
-#      user: root
-#      port: 1312
-#      target: /srv/web/blog
-#      sources:
-#        - ./liquet
-#    when:
-#      event: push
-#      branch: master
+      - pnpm run build
+
+
+  - name: deploy
+    image: cupcakearmy/drone-deploy
+    pull: always
+    environment:
+      PLUGIN_KEY:
+        from_secret: ssh_key
+    settings:
+      host: srv-0.nicco.io
+      user: root
+      port: 1312
+      target: /srv/web/blog
+      sources:
+        - ./liquet
+    when:
+      event: push
+      branch: master

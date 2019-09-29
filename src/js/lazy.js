@@ -1,6 +1,6 @@
-import jQuery from 'jquery'
+import $ from 'jquery'
 
-jQuery(($) => {
+export default () => {
     const bottomOffset = 300
     const app = document.getElementById('app')
     let loading = false
@@ -35,4 +35,4 @@ jQuery(($) => {
 
     // Check initial page if they need loading
     load.bind(app)()
-})
+}

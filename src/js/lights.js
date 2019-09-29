@@ -1,4 +1,4 @@
-;((window) => {
+export default () => {
     // Lights
     const key = 'nicco.io:blog:lights'
     const CSS = 'body, .wp-block-image img, .thumbnail img {filter: invert(1);} '
@@ -22,9 +22,9 @@
     window.toggleLights = () => isDark() ? on() : off()
 
     // Focus scrolling
-    document.addEventListener('DOMContentLoaded', ()=> {
+    document.addEventListener('DOMContentLoaded', () => {
         const toFocus = document.querySelector('[data-focusme]')
         toFocus.tabIndex = '1'
         toFocus.focus({preventScroll: true})
     })
-})(window)
+}
