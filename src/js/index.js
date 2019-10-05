@@ -5,7 +5,7 @@ import swup from './swup'
 document.addEventListener('DOMContentLoaded', () => {
     lights()
     lazy()
-    swup(()=> {
+    swup(() => {
         lazy()
     })
 })
