@@ -4,6 +4,7 @@ export default () => {
     const bottomOffset = 300
     const app = document.getElementById('app')
     let loading = false
+    let page = WPParams.lazy.current_page
 
     function load() {
 
@@ -11,18 +12,21 @@ export default () => {
 
         if (!loading && pixelToBottom < bottomOffset) {
             loading = true
+
             $.ajax({
                 url: WPParams.lazy.ajaxurl,
                 data: {
-                    'action': 'lazy_load',
-                    'query': JSON.stringify(WPParams.lazy.posts),
-                    'page': WPParams.lazy.current_page
+                    name: window.location.pathname
+                        .replace(/(\/\d+){3}\//, '')
+                        .replace(/\/$/, ''),
+                    action: 'lazy_load',
+                    page,
                 },
                 type: 'POST',
-                success: function (data) {
+                success: (data) => {
                     if (data) {
                         $('#list').find('hr:last-of-type').after(data) // where to insert posts
-                        WPParams.lazy.current_page++
+                        page++
                         loading = false
                     }
                 }

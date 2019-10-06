@@ -24,18 +24,17 @@ add_action( 'wp_enqueue_scripts', function () {
 
 
 function lazy_load_ajax_handler() {
-	$args                = json_decode( stripslashes( $_POST['query'] ), true );
-	$args['paged']       = $_POST['page'] + 1;
-	$args['post_status'] = 'publish';
-	query_posts( $args );
+	query_posts( [
+		'post_status' => 'publish',
+		'paged'       => $_POST['page'] + 1,
+		'name'        => $_POST['name'],
+	] );
 
-	if ( have_posts() ) {
-		while ( have_posts() ) {
-			the_post();
-			get_template_part( 'post-preview', get_post_format() );
-		}
+	while ( have_posts() ) {
+		the_post();
+		get_template_part( 'post-preview', get_post_format() );
 	}
-	die;
+	wp_die();
 }
 
 add_action( 'wp_ajax_lazy_load', 'lazy_load_ajax_handler' );
