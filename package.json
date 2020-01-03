@@ -5,12 +5,12 @@
     "build": "parcel build --no-source-maps -d liquet/dist ./src/js/index.js ./src/styles/index.styl"
   },
   "dependencies": {
-    "@swup/preload-plugin": "^1.0.3",
+    "@swup/preload-plugin": "1.0.x",
     "jquery": "^3.4.1",
-    "swup": "^2.0.7"
+    "swup": "2.0.x"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.3",
-    "stylus": "^0.54.7"
+    "parcel-bundler": "1.12.x",
+    "stylus": "0.54.x"
   }
 }
