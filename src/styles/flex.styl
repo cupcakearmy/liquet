@@ -1,0 +1,24 @@
+.flex
+  &.container
+    display flex
+
+    &.horizontal
+      flex-direction row
+
+    &.vertical
+      flex-direction column
+
+    &.middle
+      align-items center
+
+    &.center
+      justify-content center
+
+  &.item
+    overflow hidden
+
+    &.grow
+      flex 1 0
+
+    &.shrink
+      flex 0 1 auto

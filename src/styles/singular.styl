@@ -1,0 +1,117 @@
+#singular
+  #top
+    img
+      margin .25em .25em
+      vertical-align middle
+      transition var(--animation)
+      height var(--icon-width)
+
+      &:hover
+        transform scale(1.5)
+
+      &.reduce
+        height calc(var(--icon-width) * .8)
+
+  #main
+    padding-top 8vw
+    overflow-y auto
+    overflow-wrap break-word
+
+    &:after
+      content ''
+      height 16vh
+      display block
+
+    #content
+      & > *
+        a
+          border-bottom 2px solid var(--clr-black)
+
+  #header
+    text-align center
+    padding 0 2em
+    margin-bottom 5vmin
+    max-width 60em
+    width calc(100% - 2em)
+
+    h1
+      font-size 4vmax
+
+  #content
+    width 100%
+    padding 0 1em
+
+    h2
+      margin-top 3em
+
+    h3
+      margin-top 2em
+
+    & > *
+      max-width var(--text-width)
+      width 100%
+      line-height 1.5
+
+    .alignfull
+      max-width initial
+      width calc(100% + 4em)
+
+    .alignwide
+      max-width 60em !important
+      width 100%
+
+    blockquote
+      border-left 2px solid var(--clr-black)
+      padding-left .5em
+
+      & > p
+        margin 0
+
+      & > cite
+        font-size .75em
+
+    pre
+      overflow auto
+      background-color var(--clr-ligher)
+      padding 1em
+      border-radius .25em
+      overflow-wrap initial
+      tab-size 4
+
+    p
+      code
+        background var(--clr-ligher)
+        padding 0.3em .5em
+        border-radius .25em
+
+  .links
+    & > div
+      transform rotate(180deg) scale(1)
+      writing-mode vertical-rl
+      padding .25em
+      height 100%
+      text-align center
+      cursor pointer
+      background var(--clr-white)
+      transition var(--animation)
+      width 2em
+      line-height 1em
+
+      &:hover
+        transform rotate(180deg) scale(1.5)
+
+#singular #content h4, h5, h6
+  margin-top 1em
+
+@media only screen and (min-width: 40em)
+  #singular
+    .links
+      & > div
+        padding 1em
+        width 3em
+
+    #top
+      padding 0 .5em
+
+      img
+        margin .25em .5em
