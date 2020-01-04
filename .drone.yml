@@ -31,5 +31,5 @@ steps:
         - docker-compose -f docker-compose.prod.yml down
         - docker-compose -f docker-compose.prod.yml up -d
     when:
-      event: push
+      event: tag
       branch: master
