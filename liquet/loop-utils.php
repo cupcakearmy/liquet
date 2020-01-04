@@ -39,5 +39,5 @@ function getCurrentPageViews() {
     <div id="views">
         <b>~<?= $approximated ?>k readers</b>
     </div>
-	<?
+	<?php
 }
