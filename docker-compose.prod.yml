@@ -1,0 +1,35 @@
+version: '3.7'
+
+x-default: &default
+  restart: unless-stopped
+  env_file: .env
+
+networks:
+  traefik:
+    external: true
+
+services:
+  wp:
+    <<: *default
+    build: .
+    volumes:
+        - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+        - ./data/wp:/var/www/html
+        - ./liquet:/var/www/html/wp-content/themes/liquet:ro
+    ports:
+        - 80
+    networks:
+        - default
+        - traefik
+    labels:
+        - traefik.enable=true
+        - traefik.port=80
+        - traefik.docker.network=traefik
+        - traefik.backend=blog
+        - traefik.frontend.rule=Host:blog.nicco.io
+
+  db:
+    <<: *default
+    image: mariadb:10.3
+    volumes:
+      - ./data/db:/var/lib/mysql
