@@ -1,4 +1,4 @@
-<?php $dir = get_bloginfo( 'template_directory' ) ?>
+<?php $dir = get_template_directory_uri() ?>
 
 <!DOCTYPE html>
 <html lang="en">

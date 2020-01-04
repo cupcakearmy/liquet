@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "parcel watch --no-hmr --no-source-maps -d liquet/dist ./src/js/index.js ./src/styles/index.styl",
-    "build": "parcel build --no-source-maps -d liquet/dist ./src/js/index.js ./src/styles/index.styl"
+    "build": "rm -rf ./liquet/dist && parcel build --no-source-maps -d liquet/dist ./src/js/index.js ./src/styles/index.styl"
   },
   "dependencies": {
     "@swup/preload-plugin": "1.0.x",

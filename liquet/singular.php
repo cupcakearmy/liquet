@@ -14,12 +14,12 @@ $dates = getDates();
         <div class="flex item shrink" id="top">
             <div class="flex container horizontal middle">
                 <div class="flex item grow text-align-left" id="left">
-                    <a href="<?= get_bloginfo( 'wpurl' ); ?>">
+                    <a href="<?= site_url(); ?>">
                         <img src="<?= get_template_directory_uri() . '/vendor/icons/left.svg' ?>" alt="arrow back"/>
                     </a>
                 </div>
                 <div class="flex item shrink gohome" id="center">
-                    <a href="<?= get_bloginfo( 'wpurl' ); ?>">
+                    <a href="<?= site_url(); ?>">
                         <span class="alt-font"><?= get_bloginfo( 'name' ); ?></span>
                     </a>
                 </div>
@@ -28,7 +28,8 @@ $dates = getDates();
 					$saved = get_option( 'website_url' );
 					if ( $saved ) : ?>
                         <a href="<?= $saved; ?>" target="_blank">
-                            <img class="reduce" src="<?= get_template_directory_uri() . '/vendor/logos/website.png' ?>" alt="website"/>
+                            <img class="reduce" src="<?= get_template_directory_uri() . '/vendor/logos/website.png' ?>"
+                                 alt="website"/>
                         </a>
 					<?php endif; ?>
                     <a href="javascript:void(0);" onclick="window.toggleLights();">

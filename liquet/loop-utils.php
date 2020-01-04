@@ -6,7 +6,7 @@ function getNextURL( $next ) {
 		$post = get_adjacent_post( false, '', ! $next, 'post_tag' );
 	}
 
-	return ( $post ? get_permalink( $post->ID ) : get_bloginfo( 'wpurl' ) );
+	return ( $post ? get_permalink( $post->ID ) : site_url() );
 }
 
 function getDates() {

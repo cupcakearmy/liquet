@@ -12,7 +12,7 @@ $tags = get_tags( [ 'orderby' => 'count', 'order' => 'desc' ] );
         </a>
         <div class="flex container vertical middle" id="list-header">
             <div id="header">
-                <a href="<?= get_bloginfo( 'wpurl' ); ?>">
+                <a href="<?= site_url(); ?>">
                     <h1><?= get_bloginfo( 'name' ); ?></h1>
                     <h3><?= get_bloginfo( 'description' ); ?></h3>
                 </a>

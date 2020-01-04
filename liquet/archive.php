@@ -24,7 +24,7 @@ switch ($type) {
 ?>
     <div id="home">
         <div class="flex container vertical middle" id="list-header">
-            <a class="gohome" href="<?= get_bloginfo('wpurl'); ?>">
+            <a class="gohome" href="<?= site_url(); ?>">
                 <span class="alt-font"><?= get_bloginfo('name'); ?></span>
             </a>
             <div id="header">
