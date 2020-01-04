@@ -24,6 +24,12 @@ steps:
       target: /srv/web/blog
       sources:
         - ./liquet
+        - ./Dockerfile
+        - ./docker-compose.prod.yml
+        - ./uploads.ini
+      commands:
+        - docker-compose -f docker-compose.prod.yml down
+        - docker-compose -f docker-compose.prod.yml up -d
     when:
       event: push
       branch: master
