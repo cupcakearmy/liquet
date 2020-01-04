@@ -10,7 +10,7 @@ A minimalistic and clean wordpress theme. Guteberg support out of the box.
 ## Quickstart 🚀
 
 1. Install required plugins (see above)
-2. Download the latest zip from [releases](https://github.com/CupCakeArmy/liquet/releases)
+2. Download the [latest zip from releases](https://github.com/CupCakeArmy/liquet/releases/latest)
 3. Go to: Appearance -> Themes -> Add new and upload the zip.
 4. Activate
 
