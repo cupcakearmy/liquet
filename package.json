@@ -4,6 +4,11 @@
     "dev": "parcel watch --no-hmr --no-source-maps -d liquet/dist ./src/js/index.js ./src/styles/index.styl",
     "build": "rm -rf ./liquet/dist && parcel build --no-source-maps -d liquet/dist ./src/js/index.js ./src/styles/index.styl"
   },
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 safari versions",
+    "last 2 firefox versions"
+  ],
   "dependencies": {
     "@swup/preload-plugin": "1.0.x",
     "jquery": "^3.4.1",
