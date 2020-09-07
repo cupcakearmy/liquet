@@ -3,9 +3,9 @@ import lazy from './lazy'
 import swup from './swup'
 
 document.addEventListener('DOMContentLoaded', () => {
-    lights()
+  lights()
+  lazy()
+  swup(() => {
     lazy()
-    swup(() => {
-        lazy()
-    })
+  })
 })

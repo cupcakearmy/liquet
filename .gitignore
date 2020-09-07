@@ -10,3 +10,4 @@ node_modules/
 # Generated
 .cache/
 liquet/dist/
+liquet.zip
