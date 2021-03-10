@@ -2,6 +2,8 @@
 
 A minimalistic and clean wordpress theme. Guteberg support out of the box.
 
+> 🚨 Discontinued
+
 ## Required Plugins
 
 - [Code Prettify](https://wordpress.org/plugins/code-prettify/)
